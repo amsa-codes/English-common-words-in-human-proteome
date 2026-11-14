@@ -44,7 +44,7 @@ def nbr_occurences_in_proteome(words, proteomes):
     for word in words:
         occ=0
         for proteome, sequence in proteomes.items():
-            occ=occ+sequence.count(word):
+            occ=occ+sequence.count(word)
             
         d[word]=occ
         print(word," found in ",occ," times in sequences")
