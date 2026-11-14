@@ -28,3 +28,12 @@ def search_words_in_proteome(words, proteomes):
         d[word]=c
         print(word," found in ",c," sequences")
     return d
+def find_most_frequent_word(dict):
+    m=0
+    w=""
+    for key, value in dict.items():
+        if value>m:
+            m=value
+            w=key
+    print(w+" found in  "+str(m)+" sequences")
+    return m
