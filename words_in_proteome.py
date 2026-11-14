@@ -28,6 +28,7 @@ def search_words_in_proteome(words, proteomes):
         d[word]=c
         print(word," found in ",c," sequences")
     return d
+
 def find_most_frequent_word(dict):
     m=0
     w=""
@@ -37,3 +38,14 @@ def find_most_frequent_word(dict):
             w=key
     print(w+" found in  "+str(m)+" sequences")
     return m
+
+def nbr_occurences_in_proteome(words, proteomes):
+    d={}
+    for word in words:
+        occ=0
+        for proteome, sequence in proteomes.items():
+            occ=occ+sequence.count(word):
+            
+        d[word]=occ
+        print(word," found in ",occ," times in sequences")
+    return d
