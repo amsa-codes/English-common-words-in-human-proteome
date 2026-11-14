@@ -11,4 +11,8 @@ def read_sequences(filename):
     with open(filename, "r") as f:
         for line in f:
             if (line.startswith(">")):
-                sequences[line.split('|')[1]].get()
+                x=line.split('|')[1]
+                sequences[x]=""
+            else:
+                sequences[x]=sequences[x]+line.strip()
+    return sequences
